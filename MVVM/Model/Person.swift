@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Option {
-    let title: String
+struct Person {
+    let name: String
 }
