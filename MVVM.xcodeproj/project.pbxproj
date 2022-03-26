@@ -58,11 +58,11 @@
 		CB48012A27EF5453002FECA9 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				CB48014727EF74AA002FECA9 /* Resource */,
 				CB48014127EF5EE2002FECA9 /* Model */,
 				CB48014027EF5EAC002FECA9 /* Scene */,
 				CB48013F27EF5E84002FECA9 /* Application */,
 				CB48013127EF5453002FECA9 /* Main.storyboard */,
-				CB48013427EF5454002FECA9 /* Assets.xcassets */,
 				CB48013627EF5454002FECA9 /* LaunchScreen.storyboard */,
 				CB48013927EF5454002FECA9 /* Info.plist */,
 			);
@@ -116,6 +116,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB48014727EF74AA002FECA9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CB48013427EF5454002FECA9 /* Assets.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
