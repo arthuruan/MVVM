@@ -13,7 +13,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     
     private let tableView: UITableView = {
        let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(PersonFollowingTableViewCell.self, forCellReuseIdentifier: PersonFollowingTableViewCell.identifier)
         
         return table
     }()
@@ -21,19 +21,45 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
+        configureModels()
         view.addSubview(tableView)
         tableView.dataSource = self
         tableView.frame = view.bounds
     }
+    
+    private func configureModels() {
+        let names = [
+            "Arthur",
+            "Dionizio",
+            "Gorgonho",
+            "Ximas"
+        ]
+        
+        for name in names {
+            models.append(Person(name: name))
+        }
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return models.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Hello World"
+        let model = models[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: PersonFollowingTableViewCell.identifier,
+            for: indexPath
+        ) as? PersonFollowingTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.configure(with: PersonFollowingTableVIewCellViewModel(with: model))
+        cell.delegate = self
         return cell
     }
 }
 
+extension HomeViewController: PersonFollowingTableViewCellDelegate {
+    func personFollowingTableViewCell(_ cell: PersonFollowingTableViewCell, didTapWith viewModel: PersonFollowingTableVIewCellViewModel) {
+        // Call API
+    }
+}

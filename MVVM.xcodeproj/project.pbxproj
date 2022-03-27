@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB1830C427F0C10200286669 /* PersonFollowingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1830C327F0C10200286669 /* PersonFollowingTableViewCell.swift */; };
+		CB1830C627F0C31B00286669 /* PersonFollowingTableVIewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1830C527F0C31B00286669 /* PersonFollowingTableVIewCellViewModel.swift */; };
 		CB48012C27EF5453002FECA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB48012B27EF5453002FECA9 /* AppDelegate.swift */; };
 		CB48012E27EF5453002FECA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB48012D27EF5453002FECA9 /* SceneDelegate.swift */; };
 		CB48013027EF5453002FECA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB48012F27EF5453002FECA9 /* HomeViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB1830C327F0C10200286669 /* PersonFollowingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFollowingTableViewCell.swift; sourceTree = "<group>"; };
+		CB1830C527F0C31B00286669 /* PersonFollowingTableVIewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFollowingTableVIewCellViewModel.swift; sourceTree = "<group>"; };
 		CB48012827EF5453002FECA9 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB48012B27EF5453002FECA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB48012D27EF5453002FECA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB1830C227F0BFCD00286669 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CB1830C327F0C10200286669 /* PersonFollowingTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CB48011F27EF5453002FECA9 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +118,7 @@
 		CB48014327EF5F0F002FECA9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB1830C227F0BFCD00286669 /* Cell */,
 				CB48012F27EF5453002FECA9 /* HomeViewController.swift */,
 			);
 			path = View;
@@ -114,6 +127,7 @@
 		CB48014427EF5F28002FECA9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CB1830C527F0C31B00286669 /* PersonFollowingTableVIewCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,9 +212,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB48014627EF6029002FECA9 /* Person.swift in Sources */,
+				CB1830C427F0C10200286669 /* PersonFollowingTableViewCell.swift in Sources */,
 				CB48013027EF5453002FECA9 /* HomeViewController.swift in Sources */,
 				CB48012C27EF5453002FECA9 /* AppDelegate.swift in Sources */,
 				CB48012E27EF5453002FECA9 /* SceneDelegate.swift in Sources */,
+				CB1830C627F0C31B00286669 /* PersonFollowingTableVIewCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
